@@ -15,7 +15,7 @@ namespace HSBC.Deposits.Personnel.Vehicle.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            List<string> arrNames = new List<string>() { "Murali VV", "Hari VV" };
+            List<string> arrNames = new List<string>() { "Murali VVV", "Hari VVV" };
             return StatusCode(StatusCodes.Status200OK, arrNames);
         }
 
@@ -27,12 +27,12 @@ namespace HSBC.Deposits.Personnel.Vehicle.Controllers
         }
 
         [HttpPost, Route("post-consultant-data")]
-        [SwaggerOperation(Summary = "Get AeTm Credentials based on corporatename", Description = "Get AeTm Credentials  based on Profile Type")]
+        [SwaggerOperation(Summary = "Get AeTm Credentials based on corporate name", Description = "Get AeTm Credentials  based on Profile Type")]
         [SwaggerResponse(200, "Successful", typeof(EmployeeDTO))]
         public async Task<IActionResult> PostConsultantData(EmployeeDTO objEmployee)
         {
             return StatusCode(StatusCodes.Status200OK,
-                "Welcome " + objEmployee.EmpName + ", Your employee number is " + objEmployee.EmpNo.ToString());
+                "Welcome " + objEmployee.EmpName + ", Your employee number is : " + objEmployee.EmpNo.ToString());
 
         }
 
