@@ -13,7 +13,7 @@ namespace HSBC.Deposits.Personnel.Vehicle.Controllers
     {
         private static readonly string[] Summaries = new[]
         {
-            "Freezing", "Bracing", "Chily", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
@@ -30,7 +30,7 @@ namespace HSBC.Deposits.Personnel.Vehicle.Controllers
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 56),
+                TemperatureC = rng.Next(-20, 50),
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
